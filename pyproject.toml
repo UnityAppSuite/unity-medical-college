@@ -1,0 +1,15 @@
+[project]
+name = "unity-medical-college"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.frappe]
+app_name = "unity_medical_college"
+app_title = "Unity Medical College"
+app_publisher = "Unity"
+app_description = "Medical College addon for University App - NMC compliant MBBS management"
+app_version = "0.0.1"

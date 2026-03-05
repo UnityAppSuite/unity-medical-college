@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "autoname": "MCL.#####",
+ "creation": "2026-02-27 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "clinical_posting",
+  "case_date",
+  "case_type",
+  "column_break_1",
+  "patient_age",
+  "patient_gender",
+  "submission_date",
+  "supervisor_verified",
+  "case_section",
+  "presenting_complaint",
+  "diagnosis"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clinical_posting",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clinical Posting",
+   "options": "MBBS Clinical Posting"
+  },
+  {
+   "fieldname": "case_date",
+   "fieldtype": "Date",
+   "label": "Case Date",
+   "reqd": 1
+  },
+  {
+   "default": "Observed",
+   "fieldname": "case_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Case Type",
+   "options": "Observed\nAssisted\nIndependent"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient_age",
+   "fieldtype": "Int",
+   "label": "Patient Age"
+  },
+  {
+   "default": "Male",
+   "fieldname": "patient_gender",
+   "fieldtype": "Select",
+   "label": "Patient Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "fieldname": "submission_date",
+   "fieldtype": "Date",
+   "label": "Submission Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "supervisor_verified",
+   "fieldtype": "Check",
+   "label": "Supervisor Verified"
+  },
+  {
+   "fieldname": "case_section",
+   "fieldtype": "Section Break",
+   "label": "Case Details"
+  },
+  {
+   "fieldname": "presenting_complaint",
+   "fieldtype": "Small Text",
+   "label": "Presenting Complaint"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Unity Medical College",
+ "name": "MBBS Case Log",
+ "naming_series": "MCL-.####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Academic Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Dean",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Instructor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "student",
+ "track_changes": 1
+}

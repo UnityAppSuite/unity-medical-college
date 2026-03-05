@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "creation": "2026-02-27 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_medical_module",
+  "institution_name",
+  "regulatory_body",
+  "column_break_1",
+  "max_batch_size",
+  "theory_attendance_threshold",
+  "clinical_attendance_threshold",
+  "features_section",
+  "enable_curriculum_map",
+  "enable_case_logs",
+  "enable_osce"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_medical_module",
+   "fieldtype": "Check",
+   "label": "Enable Medical Module"
+  },
+  {
+   "fieldname": "institution_name",
+   "fieldtype": "Data",
+   "label": "Institution Name"
+  },
+  {
+   "default": "NMC",
+   "fieldname": "regulatory_body",
+   "fieldtype": "Select",
+   "label": "Regulatory Body",
+   "options": "NMC\nDCI\nINC\nOther"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "150",
+   "fieldname": "max_batch_size",
+   "fieldtype": "Int",
+   "label": "Max Batch Size"
+  },
+  {
+   "default": "75",
+   "fieldname": "theory_attendance_threshold",
+   "fieldtype": "Percent",
+   "label": "Theory Attendance Threshold (%)"
+  },
+  {
+   "default": "75",
+   "fieldname": "clinical_attendance_threshold",
+   "fieldtype": "Percent",
+   "label": "Clinical Attendance Threshold (%)"
+  },
+  {
+   "fieldname": "features_section",
+   "fieldtype": "Section Break",
+   "label": "Feature Flags"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_curriculum_map",
+   "fieldtype": "Check",
+   "label": "Enable Curriculum Map"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_case_logs",
+   "fieldtype": "Check",
+   "label": "Enable Case Logs"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_osce",
+   "fieldtype": "Check",
+   "label": "Enable OSCE Assessments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-02-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Unity Medical College",
+ "name": "Medical College Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Academic Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

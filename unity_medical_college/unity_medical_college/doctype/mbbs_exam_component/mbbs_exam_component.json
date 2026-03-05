@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "autoname": "MEC.#####",
+ "creation": "2026-02-27 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course_enrollment",
+  "theory_section",
+  "theory_ia",
+  "theory_university",
+  "theory_status",
+  "column_break_1",
+  "practical_ia",
+  "practical_university",
+  "practical_status",
+  "viva_section",
+  "viva_marks",
+  "viva_status",
+  "result_section",
+  "overall_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_enrollment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course Enrollment",
+   "options": "Course Enrollment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "theory_section",
+   "fieldtype": "Section Break",
+   "label": "Theory"
+  },
+  {
+   "fieldname": "theory_ia",
+   "fieldtype": "Float",
+   "label": "Theory IA Marks"
+  },
+  {
+   "fieldname": "theory_university",
+   "fieldtype": "Float",
+   "label": "Theory University Marks"
+  },
+  {
+   "default": "Pass",
+   "fieldname": "theory_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Theory Status",
+   "options": "Pass\nFail\nAbsent"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practical_ia",
+   "fieldtype": "Float",
+   "label": "Practical IA Marks"
+  },
+  {
+   "fieldname": "practical_university",
+   "fieldtype": "Float",
+   "label": "Practical University Marks"
+  },
+  {
+   "default": "Pass",
+   "fieldname": "practical_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Practical Status",
+   "options": "Pass\nFail\nAbsent"
+  },
+  {
+   "fieldname": "viva_section",
+   "fieldtype": "Section Break",
+   "label": "Viva"
+  },
+  {
+   "fieldname": "viva_marks",
+   "fieldtype": "Float",
+   "label": "Viva Marks"
+  },
+  {
+   "default": "Pass",
+   "fieldname": "viva_status",
+   "fieldtype": "Select",
+   "label": "Viva Status",
+   "options": "Pass\nFail\nAbsent"
+  },
+  {
+   "fieldname": "result_section",
+   "fieldtype": "Section Break",
+   "label": "Overall Result"
+  },
+  {
+   "default": "Pass",
+   "fieldname": "overall_result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Overall Result",
+   "options": "Pass\nFail\nSupplementary",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Unity Medical College",
+ "name": "MBBS Exam Component",
+ "naming_series": "MEC-.####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Academic Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Dean",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Instructor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "course_enrollment",
+ "track_changes": 1
+}

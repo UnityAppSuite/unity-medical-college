@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2026-02-27 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "station_no",
+  "station_type",
+  "marks_obtained",
+  "max_marks",
+  "examiner"
+ ],
+ "fields": [
+  {
+   "fieldname": "station_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Station No."
+  },
+  {
+   "default": "History",
+   "fieldname": "station_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Station Type",
+   "options": "History\nExamination\nProcedure\nCommunication"
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "max_marks",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Max Marks"
+  },
+  {
+   "fieldname": "examiner",
+   "fieldtype": "Data",
+   "label": "Examiner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Unity Medical College",
+ "name": "MBBS OSCE Station Score",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}

@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "autoname": "NFC.#####",
+ "creation": "2026-02-27 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "department",
+  "academic_year",
+  "required_section",
+  "required_professors",
+  "required_assoc_prof",
+  "required_asst_prof",
+  "column_break_1",
+  "actual_professors",
+  "actual_assoc_prof",
+  "actual_asst_prof",
+  "status_section",
+  "compliant",
+  "shortfall_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "required_section",
+   "fieldtype": "Section Break",
+   "label": "Required Faculty (NMC Norms)"
+  },
+  {
+   "fieldname": "required_professors",
+   "fieldtype": "Int",
+   "label": "Required Professors"
+  },
+  {
+   "fieldname": "required_assoc_prof",
+   "fieldtype": "Int",
+   "label": "Required Associate Professors"
+  },
+  {
+   "fieldname": "required_asst_prof",
+   "fieldtype": "Int",
+   "label": "Required Assistant Professors"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_professors",
+   "fieldtype": "Int",
+   "label": "Actual Professors"
+  },
+  {
+   "fieldname": "actual_assoc_prof",
+   "fieldtype": "Int",
+   "label": "Actual Associate Professors"
+  },
+  {
+   "fieldname": "actual_asst_prof",
+   "fieldtype": "Int",
+   "label": "Actual Assistant Professors"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "compliant",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Compliant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shortfall_note",
+   "fieldtype": "Small Text",
+   "label": "Shortfall Note"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Unity Medical College",
+ "name": "NMC Faculty Compliance",
+ "naming_series": "NFC-.####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Academic Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Dean",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Instructor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "department",
+ "track_changes": 1
+}
