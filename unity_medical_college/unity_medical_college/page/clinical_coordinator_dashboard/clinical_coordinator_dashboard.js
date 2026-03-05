@@ -133,21 +133,24 @@ class ClinicalCoordinatorDashboard {
 				value: postings && postings.success ? (postings.total_active || 0) : '—',
 				sublabel: __('Students in rotation today'),
 				color: 'blue',
-				icon: '<i class="fa fa-hospital-o"></i>'
+				icon: '<i class="fa fa-hospital-o"></i>',
+				onClick: function() { frappe.set_route('List', 'MBBS Clinical Posting', {status: 'Active'}); }
 			},
 			{
 				label: __('OSCE Not Yet Assessed'),
 				value: osce && osce.success ? (osce.pending_count || 0) : '—',
 				sublabel: __('Awaiting OSCE station scoring'),
 				color: osce && osce.pending_count > 0 ? 'orange' : 'green',
-				icon: '<i class="fa fa-stethoscope"></i>'
+				icon: '<i class="fa fa-stethoscope"></i>',
+				onClick: function() { frappe.set_route('List', 'MBBS OSCE Assessment'); }
 			},
 			{
 				label: __('Year-Down Risk'),
 				value: yearDown && yearDown.success ? (yearDown.at_risk_count || 0) : '—',
 				sublabel: __('Supplementary in ≥2 subjects (NMC)'),
 				color: yearDown && yearDown.at_risk_count > 0 ? 'red' : 'green',
-				icon: '<i class="fa fa-exclamation-circle"></i>'
+				icon: '<i class="fa fa-exclamation-circle"></i>',
+				onClick: function() { frappe.set_route('List', 'MBBS Exam Component'); }
 			},
 		];
 
