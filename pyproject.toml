@@ -1,6 +1,7 @@
 [project]
 name = "unity-medical-college"
 version = "0.0.1"
+description = "Medical College addon for Frappe/ERPNext - NMC compliant MBBS management"
 requires-python = ">=3.10"
 dependencies = []
 
