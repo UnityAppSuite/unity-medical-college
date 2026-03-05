@@ -74,12 +74,27 @@ def get_nmc_attendance_compliance(faculty=None, academic_term=None):
         fields=["student", "department", "attendance_theory_pct", "attendance_clinical_pct"],
     )
 
-    below_theory = [p for p in postings if (p.attendance_theory_pct or 0) < theory_threshold]
-    below_clinical = [p for p in postings if (p.attendance_clinical_pct or 0) < clinical_threshold]
-    ineligible_students = set(p.student for p in below_theory) | set(p.student for p in below_clinical)
+    # Aggregate per-student: average across all their postings
+    student_theory = {}
+    student_clinical = {}
+    for p in postings:
+        s = p.student
+        if s not in student_theory:
+            student_theory[s] = []
+            student_clinical[s] = []
+        student_theory[s].append(p.attendance_theory_pct or 0)
+        student_clinical[s].append(p.attendance_clinical_pct or 0)
 
-    all_students = set(p.student for p in postings)
+    all_students = set(student_theory.keys())
     total_students = len(all_students)
+
+    ineligible_students = set()
+    for s in all_students:
+        avg_theory = sum(student_theory[s]) / len(student_theory[s])
+        avg_clinical = sum(student_clinical[s]) / len(student_clinical[s])
+        if avg_theory < theory_threshold or avg_clinical < clinical_threshold:
+            ineligible_students.add(s)
+
     eligible_students = total_students - len(ineligible_students)
 
     dept_map = {}

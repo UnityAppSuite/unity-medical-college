@@ -216,14 +216,16 @@ class MedicalDeanDashboard {
 				value: attendance && attendance.success ? eligibilityPct + '%' : '—',
 				sublabel: __('Theory ≥75% | Clinical ≥80% (NMC MSR 2023)'),
 				color: eligibilityPct >= 90 ? 'green' : eligibilityPct >= 75 ? 'orange' : 'red',
-				icon: '<i class="fa fa-id-card"></i>'
+				icon: '<i class="fa fa-id-card"></i>',
+				onClick: function() { frappe.set_route('List', 'MBBS Clinical Posting', {status: 'Active'}); }
 			},
 			{
 				label: __('Attendance Defaulters'),
 				value: attendance && attendance.success ? (attendance.ineligible_count || 0) : '—',
 				sublabel: __('Students below NMC threshold'),
 				color: (attendance && attendance.ineligible_count > 0) ? 'red' : 'green',
-				icon: '<i class="fa fa-exclamation-triangle"></i>'
+				icon: '<i class="fa fa-exclamation-triangle"></i>',
+				onClick: function() { frappe.set_route('List', 'MBBS Clinical Posting'); }
 			},
 			{
 				label: __('Faculty NMC Compliance'),
@@ -231,7 +233,8 @@ class MedicalDeanDashboard {
 				sublabel: __('Depts meeting MSR 2023 faculty norms'),
 				color: facultyCompliance && facultyCompliance.compliance_pct === 100 ? 'green'
 					: facultyCompliance && facultyCompliance.compliance_pct >= 80 ? 'orange' : 'red',
-				icon: '<i class="fa fa-users"></i>'
+				icon: '<i class="fa fa-users"></i>',
+				onClick: function() { frappe.set_route('List', 'NMC Faculty Compliance'); }
 			},
 			// Row 2 — Academics / CBME
 			{
@@ -239,14 +242,16 @@ class MedicalDeanDashboard {
 				value: examRates && examRates.success ? examRates.theory_pass_pct + '%' : '—',
 				sublabel: __('NMC pass mark: 50%'),
 				color: examRates && examRates.theory_pass_pct >= 75 ? 'green' : 'orange',
-				icon: '<i class="fa fa-book"></i>'
+				icon: '<i class="fa fa-book"></i>',
+				onClick: function() { frappe.set_route('List', 'MBBS Exam Component'); }
 			},
 			{
 				label: __('Practical Pass %'),
 				value: examRates && examRates.success ? examRates.practical_pass_pct + '%' : '—',
 				sublabel: __('NMC pass mark: 50%'),
 				color: examRates && examRates.practical_pass_pct >= 75 ? 'green' : 'orange',
-				icon: '<i class="fa fa-flask"></i>'
+				icon: '<i class="fa fa-flask"></i>',
+				onClick: function() { frappe.set_route('List', 'MBBS Exam Component'); }
 			},
 			{
 				label: __('Curriculum Coverage'),
@@ -254,7 +259,8 @@ class MedicalDeanDashboard {
 				sublabel: __('Sessions delivered vs planned (CBME)'),
 				color: curriculum && curriculum.coverage_pct >= 80 ? 'green'
 					: curriculum && curriculum.coverage_pct >= 60 ? 'orange' : 'red',
-				icon: '<i class="fa fa-book-open"></i>'
+				icon: '<i class="fa fa-book-open"></i>',
+				onClick: function() { frappe.set_route('List', 'Curriculum Map'); }
 			},
 		];
 
