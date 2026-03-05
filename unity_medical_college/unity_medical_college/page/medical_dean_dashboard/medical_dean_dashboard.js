@@ -216,14 +216,14 @@ class MedicalDeanDashboard {
 				value: attendance && attendance.success ? eligibilityPct + '%' : '—',
 				sublabel: __('Theory ≥75% | Clinical ≥80% (NMC MSR 2023)'),
 				color: eligibilityPct >= 90 ? 'green' : eligibilityPct >= 75 ? 'orange' : 'red',
-				icon: 'fa fa-id-card'
+				icon: '<i class="fa fa-id-card"></i>'
 			},
 			{
 				label: __('Attendance Defaulters'),
 				value: attendance && attendance.success ? (attendance.ineligible_count || 0) : '—',
 				sublabel: __('Students below NMC threshold'),
 				color: (attendance && attendance.ineligible_count > 0) ? 'red' : 'green',
-				icon: 'fa fa-exclamation-triangle'
+				icon: '<i class="fa fa-exclamation-triangle"></i>'
 			},
 			{
 				label: __('Faculty NMC Compliance'),
@@ -231,7 +231,7 @@ class MedicalDeanDashboard {
 				sublabel: __('Depts meeting MSR 2023 faculty norms'),
 				color: facultyCompliance && facultyCompliance.compliance_pct === 100 ? 'green'
 					: facultyCompliance && facultyCompliance.compliance_pct >= 80 ? 'orange' : 'red',
-				icon: 'fa fa-users'
+				icon: '<i class="fa fa-users"></i>'
 			},
 			// Row 2 — Academics / CBME
 			{
@@ -239,14 +239,14 @@ class MedicalDeanDashboard {
 				value: examRates && examRates.success ? examRates.theory_pass_pct + '%' : '—',
 				sublabel: __('NMC pass mark: 50%'),
 				color: examRates && examRates.theory_pass_pct >= 75 ? 'green' : 'orange',
-				icon: 'fa fa-book'
+				icon: '<i class="fa fa-book"></i>'
 			},
 			{
 				label: __('Practical Pass %'),
 				value: examRates && examRates.success ? examRates.practical_pass_pct + '%' : '—',
 				sublabel: __('NMC pass mark: 50%'),
 				color: examRates && examRates.practical_pass_pct >= 75 ? 'green' : 'orange',
-				icon: 'fa fa-flask'
+				icon: '<i class="fa fa-flask"></i>'
 			},
 			{
 				label: __('Curriculum Coverage'),
@@ -254,7 +254,7 @@ class MedicalDeanDashboard {
 				sublabel: __('Sessions delivered vs planned (CBME)'),
 				color: curriculum && curriculum.coverage_pct >= 80 ? 'green'
 					: curriculum && curriculum.coverage_pct >= 60 ? 'orange' : 'red',
-				icon: 'fa fa-book-open'
+				icon: '<i class="fa fa-book-open"></i>'
 			},
 		];
 

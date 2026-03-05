@@ -133,21 +133,21 @@ class ClinicalCoordinatorDashboard {
 				value: postings && postings.success ? (postings.total_active || 0) : '—',
 				sublabel: __('Students in rotation today'),
 				color: 'blue',
-				icon: 'fa fa-hospital-o'
+				icon: '<i class="fa fa-hospital-o"></i>'
 			},
 			{
 				label: __('OSCE Not Yet Assessed'),
 				value: osce && osce.success ? (osce.pending_count || 0) : '—',
 				sublabel: __('Awaiting OSCE station scoring'),
 				color: osce && osce.pending_count > 0 ? 'orange' : 'green',
-				icon: 'fa fa-stethoscope'
+				icon: '<i class="fa fa-stethoscope"></i>'
 			},
 			{
 				label: __('Year-Down Risk'),
 				value: yearDown && yearDown.success ? (yearDown.at_risk_count || 0) : '—',
 				sublabel: __('Supplementary in ≥2 subjects (NMC)'),
 				color: yearDown && yearDown.at_risk_count > 0 ? 'red' : 'green',
-				icon: 'fa fa-exclamation-circle'
+				icon: '<i class="fa fa-exclamation-circle"></i>'
 			},
 		];
 
